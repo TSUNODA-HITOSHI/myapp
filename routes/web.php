@@ -15,6 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::group(['prefix' => 'admin'], function() {
-    Route::get('attend/create', 'Admin\AttendController@add');
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
+     Route::get('attend/create', 'Admin\AttendController@add');
+     Route::post('attend/create', 'Admin\AttendController@create'); # 追記
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

@@ -10,6 +10,11 @@ class AttendController extends Controller
     //
     public function add()
     {
-        return view('admin.news.create');
+        return view('admin.attend.create');
     }
+    public function create(Request $request)
+    {
+      // admin/news/createにリダイレクトする
+      return redirect('admin/attend/create');
+    } 
 }
