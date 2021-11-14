@@ -19,19 +19,31 @@
                     <div class="form-group row">
                         <label class="col-md-2">出勤</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="title" value="{{ old('title') }}">
+                            <input type="text" class="form-control" name="attend" value="{{ old('attend') }}">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-md-2">本文</label>
+                        <label class="col-md-2">退勤</label>
                         <div class="col-md-10">
-                            <textarea class="form-control" name="body" rows="20">{{ old('body') }}</textarea>
+                            <input type="text" class="form-control" name="leave" value="{{ old('leave') }}">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-md-2">画像</label>
+                        <label class="col-md-2">外出</label>
                         <div class="col-md-10">
-                            <input type="file" class="form-control-file" name="image">
+                            <input type="text" class="form-control" name="rest" value="{{ old('rest') }}">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-2">戻り</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" name="back" value="{{ old('back') }}">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-md-2">取消</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" name="cancel" value="{{ old('cancel') }}">
                         </div>
                     </div>
                     {{ csrf_field() }}
@@ -41,4 +53,3 @@
         </div>
     </div>
 @endsection
-■コラム
