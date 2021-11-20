@@ -7,7 +7,7 @@
         <div class="row">
             <div class="col-md-8 mx-auto">
                 <h2>出退勤</h2>
-                <form action="{{ action('Admin\NewsController@create') }}" method="post" enctype="multipart/form-data">
+                <form action="{{ action('Admin\AttendController@create') }}" method="post" enctype="multipart/form-data">
 
                     @if (count($errors) > 0)
                         <ul>
@@ -17,33 +17,28 @@
                         </ul>
                     @endif
                     <div class="form-group row">
-                        <label class="col-md-2">出勤</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="attend" value="{{ old('attend') }}">
+                            <button type="submit" class="form-control" name="mode" value="attend">出勤</button>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-md-2">退勤</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="leave" value="{{ old('leave') }}">
+                            <button type="submit" class="form-control" name="mode" value="leave">退勤</button>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-md-2">外出</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="rest" value="{{ old('rest') }}">
+                            <button type="submit" class="form-control" name="mode" value="rest">外出</button>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-md-2">戻り</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="back" value="{{ old('back') }}">
+                            <button type="submit" class="form-control" name="mode" value="back">戻り</button>
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-md-2">取消</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="cancel" value="{{ old('cancel') }}">
+                            <button type="submit" class="form-control" name="mode" value="cancel">取消</button>
                         </div>
                     </div>
                     {{ csrf_field() }}
