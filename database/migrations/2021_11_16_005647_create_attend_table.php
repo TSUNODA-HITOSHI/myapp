@@ -13,13 +13,10 @@ class CreateAttendTable extends Migration
      */
     public function up()
     {
-        Schema::create('attend', function (Blueprint $table) {
+        Schema::create('attends', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('attend');
-            $table->string('leave');
-            $table->string('rest');
-            $table->string('back');
-            $table->string('cancel');
+            $table->unsignedBigInteger('user_id');
+            $table->string('attend_id');
             $table->timestamps();
         });
     }
@@ -31,6 +28,6 @@ class CreateAttendTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('attend');
+        Schema::dropIfExists('attends');
     }
 }

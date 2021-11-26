@@ -18,29 +18,29 @@
                     @endif
                     <div class="form-group row">
                         <div class="col-md-10">
-                            <button type="submit" class="form-control" name="mode" value="attend">出勤</button>
+                            <button type="submit" class="form-control" name="attend_id" value="attend">出勤</button>
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-md-10">
-                            <button type="submit" class="form-control" name="mode" value="leave">退勤</button>
+                            <button type="submit" class="form-control" name="attend_id" value="leave">退勤</button>
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-md-10">
-                            <button type="submit" class="form-control" name="mode" value="rest">外出</button>
+                            <button type="submit" class="form-control" name="attend_id" value="rest">外出</button>
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-md-10">
-                            <button type="submit" class="form-control" name="mode" value="back">戻り</button>
+                            <button type="submit" class="form-control" name="attend_id" value="back">戻り</button>
                         </div>
                     </div>
-                    <div class="form-group row">
-                        <div class="col-md-10">
-                            <button type="submit" class="form-control" name="mode" value="cancel">取消</button>
-                        </div>
-                    </div>
+                    <!--<div class="form-group row">-->
+                    <!--    <div class="col-md-10">-->
+                    <!--        <button type="submit" class="form-control" name="attend_id" value="cancel">取消</button>-->
+                    <!--    </div>-->
+                    <!--</div>-->
                     {{ csrf_field() }}
                     <input type="submit" class="btn btn-primary" value="更新">
                 </form>
