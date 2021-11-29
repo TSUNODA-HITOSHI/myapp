@@ -21,10 +21,10 @@ class Attend extends Model
         'body' => 'required',
     );
 
-    // Attend Modelに関連付けを行う
-    public function histories()
-    {
-        return $this->hasMany('App\History');
-    }    
+    // // Attend Modelに関連付けを行う
+    // public function histories()
+    // {
+    //     return $this->hasMany('App\History');
+    // }    
 
 }
