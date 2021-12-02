@@ -28,7 +28,7 @@ class AttendController extends Controller
         $attend->user_id = auth()->id();
         $attend->save();
         // admin//createにリダイレクトする
-        return redirect('admin/attend/create');
+        return redirect('admin/attend/done');
     } 
     
     public function index(Request $request)
@@ -43,5 +43,11 @@ class AttendController extends Controller
         }
         return view('admin.attend.index', ['posts' => $posts, 'cond_title' => $cond_title]);
     }
+    
+    public function done(Request $request) 
+    {
+        return view('admin.attend.done', ['確認しました']);
+    }
 
 }
+

@@ -36,14 +36,19 @@
                             <button type="submit" class="form-control" name="attend_id" value="back">戻り</button>
                         </div>
                     </div>
-                    <!--<div class="form-group row">-->
-                    <!--    <div class="col-md-10">-->
-                    <!--        <button type="submit" class="form-control" name="attend_id" value="cancel">取消</button>-->
-                    <!--    </div>-->
-                    <!--</div>-->
-                    <!--{{ csrf_field() }}-->
-                    <!--<input type="submit" class="btn btn-primary" value="更新">-->
+                    {{ csrf_field() }}
                 </form>
+                <footer>
+                    <div class = "right">
+                    <h3>緊急連絡先</h3>
+                    <div class="form-group row">
+                        <div class="col-md-5">
+                            <p class = "text" >電話番号</p>
+                            <p class = "text" >メール</p>
+                        </div>
+                    </div>    
+                    </div>
+                </footer>
             </div>
         </div>
     </div>

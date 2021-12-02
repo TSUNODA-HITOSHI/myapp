@@ -19,6 +19,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
      Route::get('attend/create', 'Admin\AttendController@add');
      Route::post('attend/create', 'Admin\AttendController@create');
      Route::get('attend', 'Admin\AttendController@index');
+     Route::get('attend/done', 'Admin\AttendController@done');
 });
 
 Auth::routes();
