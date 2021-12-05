@@ -26,3 +26,14 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/', 'AttendController@index');
+
+  //ハッシュタグレポートを取得
+static function ($from, $until)
+    {
+        //created_atが20xx/xx/xx ~ 20xx/xx/xxのデータを取得
+        $date = Date::whereBetween("created_at", [$from, $until])->get();
+
+    Route::get('/month', 'DatesController@month');
+
+        return $date;
+    };
