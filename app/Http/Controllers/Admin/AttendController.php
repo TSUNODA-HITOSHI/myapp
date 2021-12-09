@@ -44,6 +44,23 @@ class AttendController extends Controller
         return view('admin.attend.index', ['posts' => $posts, 'cond_title' => $cond_title]);
     }
     
+    public function search($yyyymm)
+    {
+        // dd($yyyymm);
+        if (preg_match('/^(\d{4,4})(\d{2,2})$/', $yyyymm, $match)) {
+            // dd($match);
+            $year = $match[1];
+            $month = $match[2];
+            $dd1 = carbon::(addMonth() - ubSecond() ); 
+            $posts = Attend::whereBetween('created_at',[]);
+        } else {
+            $posts = Attend::all();
+        }
+
+        return view('admin.attend.index', ['posts' => $posts, 'cond_title' => ' ']);
+    }
+    
+    
     public function done(Request $request) 
     {
         return view('admin.attend.done', ['確認しました']);

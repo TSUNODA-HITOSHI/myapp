@@ -39,6 +39,7 @@
                             @foreach($posts as $attend)
                                 <tr>
                                     <th>{{ $attend->id }}</th>
+                                    <td>{{ $attend->created_at }}</td>
                                 </tr>
                             @endforeach
                         </tbody>

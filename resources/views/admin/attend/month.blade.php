@@ -62,10 +62,6 @@
                 <span class="mx-3 text-grey">~</span>
             <input type="date" name="until" placeholder="until_date">
         </form>    
-            
-            
-            
-            
         </div>
     </body>
 </html>
