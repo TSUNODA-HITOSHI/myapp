@@ -43,9 +43,10 @@
                                 </tr>
                             @endforeach
                         </tbody>
+                        {{ csrf_field() }}
                     </table>
                 </div>
             </div>
         </div>
-    </div>
+    </div>s
 @endsection

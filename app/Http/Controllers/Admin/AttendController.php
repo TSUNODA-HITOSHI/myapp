@@ -51,7 +51,7 @@ class AttendController extends Controller
             // dd($match);
             $year = $match[1];
             $month = $match[2];
-            $dd1 = carbon::(addMonth() - ubSecond() ); 
+            $dt = Carbon::addMonth() - subSecond() ; 
             $posts = Attend::whereBetween('created_at',[]);
         } else {
             $posts = Attend::all();
